@@ -1,3 +1,3 @@
-# Welcom
+# Welcome
 
 My portfolio
