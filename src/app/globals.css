@@ -19,6 +19,16 @@
   --color-accent-950: hsl(from #d68844 h s 5%);
 
   /* Gray Scale - Replace with your custom palette */
+  /* --color-gray-50: hsl(from #151127 h s 95%); */
+  /* --color-gray-100: hsl(from #151127 h s 90%); */
+  /* --color-gray-200: hsl(from #151127 h s 80%); */
+  /* --color-gray-300: hsl(from #151127 h s 70%); */
+  /* --color-gray-400: hsl(from #151127 h s 60%); */
+  /* --color-gray-500: hsl(from #151127 h s 50%); */
+  /* --color-gray-600: hsl(from #151127 h s 40%); */
+  /* --color-gray-700: hsl(from #151127 h s 30%); */
+  --color-gray-800: hsl(from #151127 h s 20%);
+  --color-gray-900: hsl(from #151127 h s 10%);
   --color-gray-950: #151127;
 }
 
