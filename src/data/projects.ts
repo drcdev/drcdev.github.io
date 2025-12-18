@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     slug: "tempo",
     title: "Tempo",
-    tagline: "Your rhythmic routine companion",
+    tagline: "Your rhythmic routine timer",
     description: `
 Master your timed routines with Tempo. Like a metronome guiding you through every step, transition, and recovery.
 
@@ -55,12 +55,6 @@ Transform your OmniFocus workflow with AI. Focus Pocus is a Model Context Protoc
 - High-performance caching layer with pagination
 - Connection diagnostics and system health checks
 
-## Installation
-
-\`\`\`bash
-npm install -g focus-pocus
-\`\`\`
-
 Configure in Claude Desktop's MCP settings to start managing tasks through conversation.
     `.trim(),
     screenshots: [],
@@ -74,7 +68,8 @@ Configure in Claude Desktop's MCP settings to start managing tasks through conve
   {
     slug: "drcdev-github-io",
     title: "drc.dev",
-    tagline: "Portfolio site with app store style project showcase",
+    tagline:
+      "The portfolio site you are currently looking at, here to showcase my projects",
     description: `
 This portfolio site - a Next.js static site with an ASCII/terminal aesthetic for showcasing projects.
 
