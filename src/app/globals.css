@@ -5,37 +5,115 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
     Consolas, "Liberation Mono", monospace;
 
-  /* Accent Colors - Replace with your custom palette */
-  --color-accent-50: hsl(from #d68844 h s 95%);
-  --color-accent-100: hsl(from #d68844 h s 90%);
-  --color-accent-200: hsl(from #d68844 h s 80%);
-  --color-accent-300: hsl(from #d68844 h s 70%);
-  --color-accent-400: hsl(from #d68844 h s 60%);
-  --color-accent-500: hsl(from #d68844 h s 50%);
-  --color-accent-600: hsl(from #d68844 h s 40%);
-  --color-accent-700: hsl(from #d68844 h s 30%);
-  --color-accent-800: hsl(from #d68844 h s 20%);
-  --color-accent-900: hsl(from #d68844 h s 10%);
-  --color-accent-950: hsl(from #d68844 h s 5%);
+  /* ===== BRAND COLOR PALETTES ===== */
+  /* Copy this block to other projects */
+  /* Change BASE values to update entire palettes */
 
-  /* Gray Scale - Replace with your custom palette */
-  /* --color-gray-50: hsl(from #151127 h s 95%); */
-  /* --color-gray-100: hsl(from #151127 h s 90%); */
-  /* --color-gray-200: hsl(from #151127 h s 80%); */
-  /* --color-gray-300: hsl(from #151127 h s 70%); */
-  /* --color-gray-400: hsl(from #151127 h s 60%); */
-  /* --color-gray-500: hsl(from #151127 h s 50%); */
-  /* --color-gray-600: hsl(from #151127 h s 40%); */
-  /* --color-gray-700: hsl(from #151127 h s 30%); */
-  --color-gray-800: hsl(from #151127 h s 20%);
-  --color-gray-900: hsl(from #151127 h s 10%);
-  --color-gray-950: #151127;
+  /* Dusk - Dark purple background */
+  --color-dusk-BASE: #1c1a29;
+  --color-dusk-50: hsl(from var(--color-dusk-BASE) h s 95%);
+  --color-dusk-100: hsl(from var(--color-dusk-BASE) h s 90%);
+  --color-dusk-200: hsl(from var(--color-dusk-BASE) h s 80%);
+  --color-dusk-300: hsl(from var(--color-dusk-BASE) h s 70%);
+  --color-dusk-400: hsl(from var(--color-dusk-BASE) h s 60%);
+  --color-dusk-500: hsl(from var(--color-dusk-BASE) h s 50%);
+  --color-dusk-600: hsl(from var(--color-dusk-BASE) h s 40%);
+  --color-dusk-700: hsl(from var(--color-dusk-BASE) h s 30%);
+  --color-dusk-800: hsl(from var(--color-dusk-BASE) h s 20%);
+  --color-dusk-900: hsl(from var(--color-dusk-BASE) h s 10%);
+  --color-dusk-950: hsl(from var(--color-dusk-BASE) h s 5%);
+
+  /* Rust - Warm orange accent */
+  --color-rust-BASE: #d68844;
+  --color-rust-50: hsl(from var(--color-rust-BASE) h s 95%);
+  --color-rust-100: hsl(from var(--color-rust-BASE) h s 90%);
+  --color-rust-200: hsl(from var(--color-rust-BASE) h s 80%);
+  --color-rust-300: hsl(from var(--color-rust-BASE) h s 70%);
+  --color-rust-400: hsl(from var(--color-rust-BASE) h s 60%);
+  --color-rust-500: hsl(from var(--color-rust-BASE) h s 50%);
+  --color-rust-600: hsl(from var(--color-rust-BASE) h s 40%);
+  --color-rust-700: hsl(from var(--color-rust-BASE) h s 30%);
+  --color-rust-800: hsl(from var(--color-rust-BASE) h s 20%);
+  --color-rust-900: hsl(from var(--color-rust-BASE) h s 10%);
+  --color-rust-950: hsl(from var(--color-rust-BASE) h s 5%);
+
+  /* Sage - Muted green */
+  --color-sage-BASE: #c9d198;
+  --color-sage-50: hsl(from var(--color-sage-BASE) h s 95%);
+  --color-sage-100: hsl(from var(--color-sage-BASE) h s 90%);
+  --color-sage-200: hsl(from var(--color-sage-BASE) h s 80%);
+  --color-sage-300: hsl(from var(--color-sage-BASE) h s 70%);
+  --color-sage-400: hsl(from var(--color-sage-BASE) h s 60%);
+  --color-sage-500: hsl(from var(--color-sage-BASE) h s 50%);
+  --color-sage-600: hsl(from var(--color-sage-BASE) h s 40%);
+  --color-sage-700: hsl(from var(--color-sage-BASE) h s 30%);
+  --color-sage-800: hsl(from var(--color-sage-BASE) h s 20%);
+  --color-sage-900: hsl(from var(--color-sage-BASE) h s 10%);
+  --color-sage-950: hsl(from var(--color-sage-BASE) h s 5%);
+
+  /* Lavender - Soft purple */
+  --color-lavender-BASE: #b39ddb;
+  --color-lavender-50: hsl(from var(--color-lavender-BASE) h s 95%);
+  --color-lavender-100: hsl(from var(--color-lavender-BASE) h s 90%);
+  --color-lavender-200: hsl(from var(--color-lavender-BASE) h s 80%);
+  --color-lavender-300: hsl(from var(--color-lavender-BASE) h s 70%);
+  --color-lavender-400: hsl(from var(--color-lavender-BASE) h s 60%);
+  --color-lavender-500: hsl(from var(--color-lavender-BASE) h s 50%);
+  --color-lavender-600: hsl(from var(--color-lavender-BASE) h s 40%);
+  --color-lavender-700: hsl(from var(--color-lavender-BASE) h s 30%);
+  --color-lavender-800: hsl(from var(--color-lavender-BASE) h s 20%);
+  --color-lavender-900: hsl(from var(--color-lavender-BASE) h s 10%);
+  --color-lavender-950: hsl(from var(--color-lavender-BASE) h s 5%);
+
+  /* Mist - Off-white text */
+  --color-mist-BASE: #e2e3e6;
+  --color-mist-50: hsl(from var(--color-mist-BASE) h s 98%);
+  --color-mist-100: hsl(from var(--color-mist-BASE) h s 95%);
+  --color-mist-200: hsl(from var(--color-mist-BASE) h s 90%);
+  --color-mist-300: hsl(from var(--color-mist-BASE) h s 80%);
+  --color-mist-400: hsl(from var(--color-mist-BASE) h s 70%);
+  --color-mist-500: hsl(from var(--color-mist-BASE) h s 60%);
+  --color-mist-600: hsl(from var(--color-mist-BASE) h s 50%);
+  --color-mist-700: hsl(from var(--color-mist-BASE) h s 40%);
+  --color-mist-800: hsl(from var(--color-mist-BASE) h s 30%);
+  --color-mist-900: hsl(from var(--color-mist-BASE) h s 20%);
+  --color-mist-950: hsl(from var(--color-mist-BASE) h s 10%);
+
+  /* Sand - Beige structure */
+  --color-sand-BASE: #998977;
+  --color-sand-50: hsl(from var(--color-sand-BASE) h s 95%);
+  --color-sand-100: hsl(from var(--color-sand-BASE) h s 90%);
+  --color-sand-200: hsl(from var(--color-sand-BASE) h s 80%);
+  --color-sand-300: hsl(from var(--color-sand-BASE) h s 70%);
+  --color-sand-400: hsl(from var(--color-sand-BASE) h s 60%);
+  --color-sand-500: hsl(from var(--color-sand-BASE) h s 50%);
+  --color-sand-600: hsl(from var(--color-sand-BASE) h s 40%);
+  --color-sand-700: hsl(from var(--color-sand-BASE) h s 30%);
+  --color-sand-800: hsl(from var(--color-sand-BASE) h s 20%);
+  --color-sand-900: hsl(from var(--color-sand-BASE) h s 10%);
+  --color-sand-950: hsl(from var(--color-sand-BASE) h s 5%);
+
+  /* Mauve - Gray-purple captions */
+  --color-mauve-BASE: #736775;
+  --color-mauve-50: hsl(from var(--color-mauve-BASE) h s 95%);
+  --color-mauve-100: hsl(from var(--color-mauve-BASE) h s 90%);
+  --color-mauve-200: hsl(from var(--color-mauve-BASE) h s 80%);
+  --color-mauve-300: hsl(from var(--color-mauve-BASE) h s 70%);
+  --color-mauve-400: hsl(from var(--color-mauve-BASE) h s 60%);
+  --color-mauve-500: hsl(from var(--color-mauve-BASE) h s 50%);
+  --color-mauve-600: hsl(from var(--color-mauve-BASE) h s 40%);
+  --color-mauve-700: hsl(from var(--color-mauve-BASE) h s 30%);
+  --color-mauve-800: hsl(from var(--color-mauve-BASE) h s 20%);
+  --color-mauve-900: hsl(from var(--color-mauve-BASE) h s 10%);
+  --color-mauve-950: hsl(from var(--color-mauve-BASE) h s 5%);
+
+  /* ===== END BRAND COLORS ===== */
 }
 
 /* Base Styles */
 html {
-  background-color: var(--color-gray-950);
-  color: var(--color-gray-100);
+  background-color: var(--color-dusk-BASE);
+  color: var(--color-mist-BASE);
 }
 
 body {
@@ -46,6 +124,6 @@ body {
 
 /* Selection */
 ::selection {
-  background-color: var(--color-accent-500);
-  color: var(--color-gray-950);
+  background-color: var(--color-rust-BASE);
+  color: var(--color-dusk-BASE);
 }

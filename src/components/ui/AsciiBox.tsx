@@ -10,9 +10,9 @@ interface AsciiBoxProps {
 }
 
 const variantStyles: Record<AsciiBoxVariant, string> = {
-  default: "border-gray-700 bg-gray-900",
-  accent: "border-accent-500 bg-gray-900",
-  subtle: "border-gray-800 bg-gray-950",
+  default: "border-sand-700 bg-dusk-900",
+  accent: "border-rust-500 bg-dusk-900",
+  subtle: "border-sand-800 bg-dusk-950",
 };
 
 const paddingStyles = {
@@ -38,16 +38,16 @@ export function AsciiBox({
       `}
     >
       {/* ASCII corners */}
-      <span className="absolute -top-px -left-px text-gray-600 select-none">
+      <span className="absolute -top-px -left-px text-sand-600 select-none">
         +
       </span>
-      <span className="absolute -top-px -right-px text-gray-600 select-none">
+      <span className="absolute -top-px -right-px text-sand-600 select-none">
         +
       </span>
-      <span className="absolute -bottom-px -left-px text-gray-600 select-none">
+      <span className="absolute -bottom-px -left-px text-sand-600 select-none">
         +
       </span>
-      <span className="absolute -bottom-px -right-px text-gray-600 select-none">
+      <span className="absolute -bottom-px -right-px text-sand-600 select-none">
         +
       </span>
       {children}

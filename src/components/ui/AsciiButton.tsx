@@ -26,11 +26,11 @@ type AsciiButtonProps = ButtonProps | LinkProps;
 
 const variantStyles: Record<AsciiButtonVariant, string> = {
   primary:
-    "border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-gray-950",
+    "border-rust-500 text-rust-500 hover:bg-rust-500 hover:text-dusk-950",
   secondary:
-    "border-gray-600 text-gray-300 hover:border-gray-400 hover:text-gray-100",
+    "border-sand-600 text-mist-300 hover:border-sand-400 hover:text-mist-100",
   ghost:
-    "border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-700",
+    "border-transparent text-mauve-400 hover:text-mist-200 hover:border-sand-700",
 };
 
 const sizeStyles: Record<AsciiButtonSize, string> = {

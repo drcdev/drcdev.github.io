@@ -20,10 +20,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <AsciiBox
         variant="default"
         padding="none"
-        className="h-full transition-colors hover:border-accent-600"
+        className="h-full transition-colors hover:border-rust-600"
       >
         {/* Screenshot */}
-        <div className="relative aspect-video bg-gray-800 overflow-hidden">
+        <div className="relative aspect-video bg-dusk-800 overflow-hidden">
           {project.screenshots[0] ? (
             <Image
               src={project.screenshots[0]}
@@ -33,7 +33,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-gray-600 text-4xl">{"</>"}</span>
+              <span className="text-mauve-600 text-4xl">{"</>"}</span>
             </div>
           )}
           {/* Category badge */}
@@ -45,10 +45,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {/* Content */}
         <div className="p-4 space-y-3">
           <div>
-            <h3 className="text-lg font-bold text-gray-100 group-hover:text-accent-500 transition-colors">
+            <h3 className="text-lg font-bold text-mist-100 group-hover:text-rust-500 transition-colors">
               {project.title}
             </h3>
-            <p className="text-gray-500 text-sm mt-1">{project.tagline}</p>
+            <p className="text-mauve-400 text-sm mt-1">{project.tagline}</p>
           </div>
 
           {/* Tech stack */}
@@ -59,7 +59,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </Badge>
             ))}
             {project.technologies.length > 4 && (
-              <Badge variant="outline">+{project.technologies.length - 4}</Badge>
+              <Badge variant="outline">
+                +{project.technologies.length - 4}
+              </Badge>
             )}
           </div>
         </div>

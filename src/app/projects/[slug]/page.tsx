@@ -47,10 +47,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <div className="flex items-start gap-4 mb-4">
                 <Badge variant="accent">{project.category.toUpperCase()}</Badge>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-100 mb-2">
+              <h1 className="text-3xl md:text-4xl font-bold text-mist-100 mb-2">
                 {project.title}
               </h1>
-              <p className="text-xl text-gray-400">{project.tagline}</p>
+              <p className="text-xl text-mauve-400">{project.tagline}</p>
             </header>
 
             {/* Screenshots */}
@@ -123,7 +123,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {/* Tech stack */}
             <div className="mb-8">
-              <h2 className="text-sm text-gray-500 mb-3">
+              <h2 className="text-sm text-mauve-500 mb-3">
                 {"// technologies"}
               </h2>
               <div className="flex flex-wrap gap-2">
