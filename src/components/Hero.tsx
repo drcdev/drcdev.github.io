@@ -23,13 +23,13 @@ export function Hero() {
               application.
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-mauve-500">
-              <span>
+              <span className="text-sage-300">
                 <span className="text-rust-600">//</span> curiosity
               </span>
-              <span>
+              <span className="text-sage-300">
                 <span className="text-rust-600">//</span> systems leadership
               </span>
-              <span>
+              <span className="text-sage-300">
                 <span className="text-rust-600">//</span> exploration
               </span>
             </div>
