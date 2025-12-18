@@ -15,7 +15,7 @@ export function ProjectGrid({ projects, title }: ProjectGridProps) {
             <h2 className="text-xl font-bold text-gray-200">
               <span className="text-accent-500">{"#"}</span> {title}
             </h2>
-            <div className="mt-2 h-px bg-gradient-to-r from-gray-800 to-transparent" />
+            <div className="mt-2 h-px bg-linear-to-r from-gray-800 to-transparent" />
           </div>
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
