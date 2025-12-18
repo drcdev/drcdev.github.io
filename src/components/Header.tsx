@@ -36,7 +36,7 @@ export function Header() {
               [blog]
             </a>
             <a
-              href="https://www.linkedin.com/in/colemandon/"
+              href="https://www.linkedin.com/in/drcdev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-200 transition-colors"

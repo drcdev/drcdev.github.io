@@ -58,7 +58,7 @@ export function Footer() {
               <GitHubIcon />
             </a>
             <a
-              href="https://www.linkedin.com/in/colemandon/"
+              href="https://www.linkedin.com/in/drcdev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-accent-500 transition-colors"
