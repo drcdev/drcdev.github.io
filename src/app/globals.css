@@ -19,17 +19,7 @@
   --color-accent-950: #3a1d10;
 
   /* Gray Scale - Replace with your custom palette */
-  --color-gray-50: #f7f7f8;
-  --color-gray-100: #ececef;
-  --color-gray-200: #d5d5db;
-  --color-gray-300: #b1b1bc;
-  --color-gray-400: #8686969;
-  --color-gray-500: #6b6b7b;
-  --color-gray-600: #5a5a68;
-  --color-gray-700: #4a4a55;
-  --color-gray-800: #3f3f48;
-  --color-gray-900: #27272d;
-  --color-gray-950: #141417;
+  --color-gray-950: #151127;
 }
 
 /* Base Styles */

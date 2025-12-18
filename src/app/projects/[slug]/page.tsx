@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Header, Footer, AsciiBox, AsciiButton, Badge } from "@/components";
+import { Header, Footer, AsciiBox, AsciiButton, Badge, Markdown } from "@/components";
 import { projects, getProjectBySlug, getAllProjectSlugs } from "@/data/projects";
 
 interface ProjectPageProps {
@@ -137,11 +137,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {/* Description */}
             <AsciiBox variant="subtle" padding="lg">
-              <div className="prose prose-invert prose-gray max-w-none">
-                <div className="text-gray-300 whitespace-pre-line">
-                  {project.description}
-                </div>
-              </div>
+              <Markdown>{project.description}</Markdown>
             </AsciiBox>
           </div>
         </article>
