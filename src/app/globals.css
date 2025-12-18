@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font Family */
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Liberation Mono", monospace;
+
+  /* Accent Colors - Replace with your custom palette */
+  --color-accent-50: #fef3e7;
+  --color-accent-100: #fde4c8;
+  --color-accent-200: #fbc78f;
+  --color-accent-300: #f8a756;
+  --color-accent-400: #f5872d;
+  --color-accent-500: #d68844;
+  --color-accent-600: #b86e30;
+  --color-accent-700: #96552a;
+  --color-accent-800: #7a4528;
+  --color-accent-900: #653a24;
+  --color-accent-950: #3a1d10;
+
+  /* Gray Scale - Replace with your custom palette */
+  --color-gray-50: #f7f7f8;
+  --color-gray-100: #ececef;
+  --color-gray-200: #d5d5db;
+  --color-gray-300: #b1b1bc;
+  --color-gray-400: #8686969;
+  --color-gray-500: #6b6b7b;
+  --color-gray-600: #5a5a68;
+  --color-gray-700: #4a4a55;
+  --color-gray-800: #3f3f48;
+  --color-gray-900: #27272d;
+  --color-gray-950: #141417;
+}
+
+/* Base Styles */
+html {
+  background-color: var(--color-gray-950);
+  color: var(--color-gray-100);
+}
+
+body {
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent-500);
+  color: var(--color-gray-950);
+}
