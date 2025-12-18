@@ -1,14 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { AsciiBox } from "./ui";
+
+function getCssVariable(name: string): string {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(name)
+    .trim();
+}
 
 interface GhostSignupProps {
   site: string;
   label?: string;
-  backgroundColor?: string;
-  textColor?: string;
-  buttonColor?: string;
-  buttonTextColor?: string;
   title?: string;
   description?: string;
   icon?: string;
@@ -17,10 +20,6 @@ interface GhostSignupProps {
 export function GhostSignup({
   site,
   label,
-  backgroundColor,
-  textColor,
-  buttonColor,
-  buttonTextColor,
   title,
   description,
   icon,
@@ -30,6 +29,10 @@ export function GhostSignup({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    // Read colors from CSS custom properties
+    const textColor = getCssVariable("--color-mist-BASE");
+    const buttonColor = getCssVariable("--color-rust-BASE");
+
     const script = document.createElement("script");
     script.src =
       "https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js";
@@ -38,10 +41,9 @@ export function GhostSignup({
     script.dataset.locale = "en";
 
     if (label) script.dataset.label1 = label;
-    if (backgroundColor) script.dataset.backgroundColor = backgroundColor;
     if (textColor) script.dataset.textColor = textColor;
     if (buttonColor) script.dataset.buttonColor = buttonColor;
-    if (buttonTextColor) script.dataset.buttonTextColor = buttonTextColor;
+    script.dataset.buttonTextColor = textColor;
     if (title) script.dataset.title = title;
     if (description) script.dataset.description = description;
     if (icon) script.dataset.icon = icon;
@@ -53,17 +55,15 @@ export function GhostSignup({
         containerRef.current.innerHTML = "";
       }
     };
-  }, [
-    site,
-    label,
-    backgroundColor,
-    textColor,
-    buttonColor,
-    buttonTextColor,
-    title,
-    description,
-    icon,
-  ]);
+  }, [site, label, title, description, icon]);
 
-  return <div ref={containerRef} className="h-[30vmin] min-h-90" />;
+  return (
+    <section className="pb-12">
+      <div className="max-w-4xl mx-auto px-4">
+        <AsciiBox variant="subtle" padding="none">
+          <div ref={containerRef} className="h-[30vmin] min-h-90" />
+        </AsciiBox>
+      </div>
+    </section>
+  );
 }

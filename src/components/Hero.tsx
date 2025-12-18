@@ -14,7 +14,7 @@ export function Hero() {
                 Don Coleman
               </h1>
               <p className="text-rust-500 text-lg">
-                Cloud Architect & Systems Thinker
+                Cloud Architect & Systems Leader
               </p>
             </div>
             <p className="text-mauve-400 text-lg leading-relaxed max-w-4xl">

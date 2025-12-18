@@ -18,14 +18,7 @@ export function Footer() {
             >
               [blog]
             </a>
-            <a
-              href="https://github.com/drcdev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-mauve-500 hover:text-rust-500 transition-colors text-sm"
-            >
-              [github]
-            </a>
+
             <a
               href="https://www.linkedin.com/in/drcdev"
               target="_blank"
@@ -33,6 +26,14 @@ export function Footer() {
               className="text-mauve-500 hover:text-rust-500 transition-colors text-sm"
             >
               [linkedin]
+            </a>
+            <a
+              href="https://github.com/drcdev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-mauve-500 hover:text-rust-500 transition-colors text-sm"
+            >
+              [github]
             </a>
           </div>
         </div>
