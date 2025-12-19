@@ -98,18 +98,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <AsciiButton
                   href={project.links.blog}
                   external
-                  variant="secondary"
+                  variant="primary"
                 >
                   blog post
-                </AsciiButton>
-              )}
-              {project.links.github && (
-                <AsciiButton
-                  href={project.links.github}
-                  external
-                  variant="secondary"
-                >
-                  github
                 </AsciiButton>
               )}
               {project.links.live && (
@@ -119,6 +110,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   variant="primary"
                 >
                   live demo
+                </AsciiButton>
+              )}
+              {project.links.github && (
+                <AsciiButton
+                  href={project.links.github}
+                  external
+                  variant="secondary"
+                >
+                  github
                 </AsciiButton>
               )}
               {project.links.appStore && (
