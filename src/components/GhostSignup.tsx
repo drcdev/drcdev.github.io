@@ -30,6 +30,7 @@ export function GhostSignup({
     if (!containerRef.current) return;
 
     // Read colors from CSS custom properties
+    const backgroundColor = getCssVariable("--color-dusk-950");
     const textColor = getCssVariable("--color-mist-BASE");
     const buttonColor = getCssVariable("--color-rust-BASE");
 
@@ -41,6 +42,7 @@ export function GhostSignup({
     script.dataset.locale = "en";
 
     if (label) script.dataset.label1 = label;
+    if (backgroundColor) script.dataset.backgroundColor = backgroundColor;
     if (textColor) script.dataset.textColor = textColor;
     if (buttonColor) script.dataset.buttonColor = buttonColor;
     script.dataset.buttonTextColor = textColor;
@@ -60,7 +62,7 @@ export function GhostSignup({
   return (
     <section className="pb-12">
       <div className="max-w-4xl mx-auto px-4">
-        <AsciiBox variant="subtle" padding="none">
+        <AsciiBox variant="subtle" padding="sm">
           <div ref={containerRef} className="h-[30vmin] min-h-90" />
         </AsciiBox>
       </div>

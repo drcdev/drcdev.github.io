@@ -11,7 +11,7 @@ export default function Home() {
         <GhostSignup
           site="https://www.doncoleman.ca/"
           label="drc.dev"
-          title="Subscribe to Drift & Convergence"
+          title="Drift & Convergence Newsletter"
           description="Subscribe for infrequent and insightful updates exploring the flow of ideas, leadership, and navigating complexity."
           icon="https://www.doncoleman.ca/content/images/size/w192h192/size/w256h256/2025/03/e908e33a-328f-4a54-97b3-c1ba76d3fff8.png"
         />
