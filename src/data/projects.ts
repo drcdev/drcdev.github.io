@@ -62,6 +62,7 @@ Configure in Claude Desktop's MCP settings to start managing tasks through conve
     category: "tool",
     links: {
       github: "https://github.com/drcdev/focus-pocus",
+      blog: "https://www.doncoleman.ca/drift/2025/building-focus-pocus-what-i-learned-about-ai-coding-and-integration/",
     },
     featured: true,
   },

@@ -26,11 +26,11 @@ type AsciiButtonProps = ButtonProps | LinkProps;
 
 const variantStyles: Record<AsciiButtonVariant, string> = {
   primary:
-    "border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-gray-950",
+    "border-sage-300 text-sage-300 hover:bg-sage-300 hover:text-dusk-950",
   secondary:
-    "border-gray-600 text-gray-300 hover:border-gray-400 hover:text-gray-100",
+    "border-sand-600 text-mist-300 hover:border-sand-400 hover:text-mist-100",
   ghost:
-    "border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-700",
+    "border-transparent text-mauve-400 hover:text-mist-200 hover:border-sand-700",
 };
 
 const sizeStyles: Record<AsciiButtonSize, string> = {
@@ -47,7 +47,7 @@ export function AsciiButton({
   ...props
 }: AsciiButtonProps) {
   const baseStyles = `
-    relative inline-flex items-center justify-center
+    inline-flex items-center justify-center
     border transition-colors duration-150
     font-mono
     ${variantStyles[variant]}
@@ -55,10 +55,11 @@ export function AsciiButton({
     ${className}
   `;
 
-  const corners = (
+  const content = (
     <>
-      <span className="absolute -top-px -left-px select-none">[</span>
-      <span className="absolute -top-px -right-px select-none">]</span>
+      <span className="select-none">[</span>
+      <span className="px-1">{children}</span>
+      <span className="select-none">]</span>
     </>
   );
 
@@ -73,23 +74,20 @@ export function AsciiButton({
           className={baseStyles}
           {...(rest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
         >
-          {corners}
-          {children}
+          {content}
         </a>
       );
     }
     return (
       <Link href={href} className={baseStyles}>
-        {corners}
-        {children}
+        {content}
       </Link>
     );
   }
 
   return (
     <button className={baseStyles} {...(props as ButtonProps)}>
-      {corners}
-      {children}
+      {content}
     </button>
   );
 }
