@@ -15,6 +15,7 @@ export type ProjectCategory = "app" | "tool" | "library" | "experiment";
 export interface ProjectLinks {
   github?: string;
   live?: string;
+  blog?: string;
   appStore?: string;
   playStore?: string;
 }

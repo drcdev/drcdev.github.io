@@ -52,10 +52,12 @@ export function GhostSignup() {
         <AsciiBox variant="subtle" padding="lg">
           <div className="space-y-6 text-center">
             <h2 className="text-xl font-bold text-rust-500">
-              <span className="text-mauve-600">//</span> Drift & Convergence Newsletter
+              <span className="text-mauve-600">//</span> Drift & Convergence
+              Newsletter
             </h2>
             <p className="text-mauve-400 max-w-xl mx-auto">
-              Subscribe for infrequent and insightful updates exploring the flow of ideas, leadership, and navigating complexity.
+              Subscribe for infrequent and insightful updates exploring the flow
+              of ideas, leadership, and navigating complexity.
             </p>
 
             {status === "success" ? (
@@ -92,13 +94,13 @@ export function GhostSignup() {
                     {status === "loading" ? "[...]" : "[subscribe]"}
                   </button>
                 </form>
-                <p className="text-mauve-600 text-xs">
+                <p className="text-sage-300 text-xs">
                   Emails sent from my personal website @{" "}
                   <a
                     href="https://doncoleman.ca"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-mauve-500 hover:text-rust-500 transition-colors"
+                    className="hover:text-rust-500 transition-colors"
                   >
                     doncoleman.ca
                   </a>

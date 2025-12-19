@@ -1,7 +1,14 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Header, Footer, AsciiBox, AsciiButton, Badge, Markdown } from "@/components";
-import { projects, getProjectBySlug, getAllProjectSlugs } from "@/data/projects";
+import {
+  Header,
+  Footer,
+  AsciiBox,
+  AsciiButton,
+  Badge,
+  Markdown,
+} from "@/components";
+import { getProjectBySlug, getAllProjectSlugs } from "@/data/projects";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -87,6 +94,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {/* Links */}
             <div className="flex flex-wrap gap-3 mb-8">
+              {project.links.blog && (
+                <AsciiButton
+                  href={project.links.blog}
+                  external
+                  variant="secondary"
+                >
+                  blog post
+                </AsciiButton>
+              )}
               {project.links.github && (
                 <AsciiButton
                   href={project.links.github}
@@ -97,7 +113,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </AsciiButton>
               )}
               {project.links.live && (
-                <AsciiButton href={project.links.live} external variant="primary">
+                <AsciiButton
+                  href={project.links.live}
+                  external
+                  variant="primary"
+                >
                   live demo
                 </AsciiButton>
               )}
