@@ -1,69 +1,117 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useState, FormEvent } from "react";
 import { AsciiBox } from "./ui";
 
-function getCssVariable(name: string): string {
-  return getComputedStyle(document.documentElement)
-    .getPropertyValue(name)
-    .trim();
-}
+export function GhostSignup() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [message, setMessage] = useState("");
 
-interface GhostSignupProps {
-  site: string;
-  label?: string;
-  title?: string;
-  description?: string;
-  icon?: string;
-}
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
 
-export function GhostSignup({
-  site,
-  label,
-  title,
-  description,
-  icon,
-}: GhostSignupProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+    try {
+      const response = await fetch(
+        "https://www.doncoleman.ca/members/api/send-magic-link/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            emailType: "subscribe",
+          }),
+        }
+      );
 
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    // Read colors from CSS custom properties
-    const backgroundColor = getCssVariable("--color-dusk-950");
-    const textColor = getCssVariable("--color-mist-BASE");
-    const buttonColor = getCssVariable("--color-rust-BASE");
-
-    const script = document.createElement("script");
-    script.src =
-      "https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js";
-    script.async = true;
-    script.dataset.site = site;
-    script.dataset.locale = "en";
-
-    if (label) script.dataset.label1 = label;
-    if (backgroundColor) script.dataset.backgroundColor = backgroundColor;
-    if (textColor) script.dataset.textColor = textColor;
-    if (buttonColor) script.dataset.buttonColor = buttonColor;
-    script.dataset.buttonTextColor = textColor;
-    if (title) script.dataset.title = title;
-    if (description) script.dataset.description = description;
-    if (icon) script.dataset.icon = icon;
-
-    containerRef.current.appendChild(script);
-
-    return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = "";
+      if (response.ok) {
+        setStatus("success");
+        setMessage("Check your inbox for a confirmation link!");
+        setEmail("");
+      } else {
+        const data = await response.json();
+        setStatus("error");
+        setMessage(
+          data.errors?.[0]?.message || "Something went wrong. Please try again."
+        );
       }
-    };
-  }, [site, label, title, description, icon]);
+    } catch {
+      setStatus("error");
+      setMessage("Network error. Please try again.");
+    }
+  };
 
   return (
     <section className="pb-12">
       <div className="max-w-4xl mx-auto px-4">
-        <AsciiBox variant="subtle" padding="sm">
-          <div ref={containerRef} className="h-[30vmin] min-h-90" />
+        <AsciiBox variant="subtle" padding="lg">
+          <div className="space-y-6 text-center">
+            <h2 className="text-xl font-bold text-rust-500">
+              <span className="text-mauve-600">//</span> Drift & Convergence Newsletter
+            </h2>
+            <p className="text-mauve-400 max-w-xl mx-auto">
+              Subscribe for infrequent and insightful updates exploring the flow of ideas, leadership, and navigating complexity.
+            </p>
+
+            {status === "success" ? (
+              <div className="py-4">
+                <p className="text-sage-400 font-mono">
+                  <span className="text-rust-500">$</span> {message}
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+                >
+                  <div className="flex-1 relative">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-mauve-600 select-none">
+                      {">"}
+                    </span>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="your@email.com"
+                      required
+                      disabled={status === "loading"}
+                      className="w-full pl-8 pr-4 py-2 bg-dusk-900 border border-sand-700 text-mist-200 placeholder-mauve-600 font-mono text-sm focus:outline-none focus:border-rust-500 transition-colors disabled:opacity-50"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="px-6 py-2 border border-rust-500 text-rust-500 font-mono text-sm hover:bg-rust-500 hover:text-dusk-950 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" ? "[...]" : "[subscribe]"}
+                  </button>
+                </form>
+                <p className="text-mauve-600 text-xs">
+                  Emails sent from my personal website @{" "}
+                  <a
+                    href="https://doncoleman.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-mauve-500 hover:text-rust-500 transition-colors"
+                  >
+                    doncoleman.ca
+                  </a>
+                </p>
+              </div>
+            )}
+
+            {status === "error" && (
+              <p className="text-rust-400 text-sm font-mono">
+                <span className="text-rust-600">!</span> {message}
+              </p>
+            )}
+          </div>
         </AsciiBox>
       </div>
     </section>
