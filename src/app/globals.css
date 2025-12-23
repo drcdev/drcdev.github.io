@@ -23,7 +23,7 @@
   --color-dusk-900: hsl(from var(--color-dusk-BASE) h s 10%);
   --color-dusk-950: hsl(from var(--color-dusk-BASE) h s 5%);
 
-  /* Rust - Warm orange accent */
+  /* Rust - Warm orange accent for primary headers and accents */
   --color-rust-BASE: #d68844;
   --color-rust-50: hsl(from var(--color-rust-BASE) h s 95%);
   --color-rust-100: hsl(from var(--color-rust-BASE) h s 90%);
@@ -37,7 +37,7 @@
   --color-rust-900: hsl(from var(--color-rust-BASE) h s 10%);
   --color-rust-950: hsl(from var(--color-rust-BASE) h s 5%);
 
-  /* Sage - Muted green */
+  /* Sage - Muted green for secondary headers and accents */
   --color-sage-BASE: #c9d198;
   --color-sage-50: hsl(from var(--color-sage-BASE) h s 95%);
   --color-sage-100: hsl(from var(--color-sage-BASE) h s 90%);
@@ -51,7 +51,7 @@
   --color-sage-900: hsl(from var(--color-sage-BASE) h s 10%);
   --color-sage-950: hsl(from var(--color-sage-BASE) h s 5%);
 
-  /* Lavender - Soft purple */
+  /* Lavender - Soft purple for special emphasis only */
   --color-lavender-BASE: #b39ddb;
   --color-lavender-50: hsl(from var(--color-lavender-BASE) h s 95%);
   --color-lavender-100: hsl(from var(--color-lavender-BASE) h s 90%);

@@ -89,7 +89,13 @@ Built with security defaults including Content Security Policy headers, Subresou
 Optional Express.js API gateway for secure AI integration with rate limiting, cost tracking, and an analytics dashboard. Deploys to Fly.io with persistent SQLite storage.
     `.trim(),
     screenshots: [],
-    technologies: ["Ghost", "Handlebars", "Tailwind CSS", "JavaScript", "Node.js"],
+    technologies: [
+      "Ghost",
+      "Handlebars",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+    ],
     category: "tool",
     links: {
       github: "https://github.com/drcdev/flux",
