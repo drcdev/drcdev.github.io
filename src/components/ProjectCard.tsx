@@ -29,7 +29,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               src={project.screenshots[0]}
               alt={project.title}
               fill
-              className="object-cover transition-transform group-hover:scale-105"
+              className="object-cover object-top transition-transform group-hover:scale-105"
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
