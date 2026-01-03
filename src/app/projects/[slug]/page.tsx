@@ -139,6 +139,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   play store
                 </AsciiButton>
               )}
+              {project.privacyPolicy && (
+                <AsciiButton
+                  href={`/projects/${slug}/privacy`}
+                  variant="ghost"
+                >
+                  privacy policy
+                </AsciiButton>
+              )}
             </div>
 
             {/* Tech stack */}
