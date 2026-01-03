@@ -140,6 +140,89 @@ Automated via GitHub Actions - pushes to main trigger a build and deploy to GitH
       live: "https://drc.dev",
     },
   },
+  {
+    slug: "plunge-buddy",
+    title: "Plunge Buddy",
+    tagline: "Real-time conditions for cold plunge enthusiasts",
+    description: `
+An iOS app that helps cold plunge enthusiasts find the perfect conditions by displaying real-time weather, water temperature, wave height, and tide information based on your location.
+
+## Features
+
+- **Real-time Weather** - Air temperature and "feels like" temperature
+- **Marine Data** - Sea surface water temperature and wave height
+- **Tide Information** - Last and next high/low tides
+- **Location-based** - Automatic local data with fallback to Vancouver, BC
+- **Clean Interface** - Modern SwiftUI design with glassmorphic cards
+
+## Architecture
+
+Built with Swift and SwiftUI using MVVM architecture. Uses actor-based network services for thread-safe API calls with async/await throughout.
+
+## Credits
+
+Created by Kieran McConnell. Maintained and deployed by Don Coleman.
+    `.trim(),
+    screenshots: [],
+    technologies: ["Swift", "SwiftUI", "CoreLocation"],
+    category: "app",
+    links: {
+      github: "https://github.com/drcdev/Plunge-Buddy",
+    },
+    privacyPolicy: `
+# PlungeBuddy Privacy Policy
+
+**Last updated:** January 2, 2025
+
+## Overview
+
+PlungeBuddy is a simple app that shows local weather, marine, and tide conditions to help you plan your cold plunge. Your privacy is important to us, and we've designed the app to collect as little data as possible.
+
+## Data We Collect
+
+### Location Data
+
+PlungeBuddy requests access to your device's location to display weather and marine conditions near you. Your location:
+
+- Is used only while the app is open
+- Is not stored or saved by us
+- Is not used for tracking or analytics
+
+If you deny location access, the app will use a default location (Vancouver, BC).
+
+## Third-Party Services
+
+To provide weather and tide information, your approximate location is shared with the following services:
+
+- **OpenWeatherMap** ([Privacy Policy](https://openweathermap.org/privacy-policy)) - Weather data
+- **Open-Meteo** ([Privacy Policy](https://open-meteo.com/en/terms)) - Marine data
+- **WorldTides** ([Privacy Policy](https://www.worldtides.info/privacy)) - Tide data
+
+We encourage you to review their privacy policies. We have no control over how these services handle data.
+
+## Data Storage
+
+PlungeBuddy does not:
+
+- Create user accounts
+- Store personal information
+- Use analytics or tracking
+- Save data between sessions
+- Share data with advertisers
+
+## Children's Privacy
+
+PlungeBuddy does not knowingly collect information from children under 13.
+
+## Changes to This Policy
+
+We may update this privacy policy from time to time. Changes will be reflected in the "Last updated" date above.
+
+## Contact
+
+If you have questions about this privacy policy, contact us at: contact@doncoleman.ca
+    `.trim(),
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
@@ -152,4 +235,8 @@ export function getFeaturedProjects(): Project[] {
 
 export function getAllProjectSlugs(): string[] {
   return projects.map((p) => p.slug);
+}
+
+export function getProjectsWithPrivacyPolicy(): Project[] {
+  return projects.filter((p) => p.privacyPolicy);
 }

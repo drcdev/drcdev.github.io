@@ -8,6 +8,7 @@ export interface Project {
   category: ProjectCategory;
   links: ProjectLinks;
   featured?: boolean;
+  privacyPolicy?: string;
 }
 
 export type ProjectCategory = "app" | "tool" | "library" | "experiment";
