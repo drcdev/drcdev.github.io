@@ -63,13 +63,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {/* Screenshots */}
             {project.screenshots.length > 0 && (
               <div className="mb-8">
-                <AsciiBox variant="default" padding="none">
-                  <div className="relative aspect-video">
+                <AsciiBox variant="default" padding="md">
+                  <div className="flex justify-center">
                     <Image
                       src={project.screenshots[0]}
                       alt={project.title}
-                      fill
-                      className="object-cover"
+                      width={400}
+                      height={800}
+                      className="object-contain max-h-[600px] w-auto"
                     />
                   </div>
                 </AsciiBox>

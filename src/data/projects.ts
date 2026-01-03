@@ -163,7 +163,7 @@ Built with Swift and SwiftUI using MVVM architecture. Uses actor-based network s
 
 Created by Kieran McConnell. Maintained and deployed by Don Coleman.
     `.trim(),
-    screenshots: [],
+    screenshots: ["/projects/plunge-buddy.png"],
     technologies: ["Swift", "SwiftUI", "CoreLocation"],
     category: "app",
     links: {
