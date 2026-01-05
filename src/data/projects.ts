@@ -57,7 +57,7 @@ If you enable cloud sync, your data is stored on [Supabase](https://supabase.com
 
 When sync is enabled:
 - Routines and steps you create
-- Workout history
+- Routine history
 - Theme and accessibility preferences
 
 ### What Stays Local
@@ -71,7 +71,7 @@ These are never uploaded:
 
 - All data is encrypted at rest (AES-256) and in transit (TLS)
 - Row-level security ensures you can only access your own data
-- Magic link authentication (no passwords stored)
+- Magic link email authentication (no passwords stored)
 
 For details, see [Supabase Privacy Policy](https://supabase.com/privacy) and [Supabase Security](https://supabase.com/security).
 
