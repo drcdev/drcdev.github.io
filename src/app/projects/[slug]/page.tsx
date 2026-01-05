@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       alt={project.title}
                       width={400}
                       height={800}
-                      className="object-contain max-h-[600px] w-auto"
+                      className="object-contain max-h-150 w-auto"
                     />
                   </div>
                 </AsciiBox>
@@ -141,10 +141,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </AsciiButton>
               )}
               {project.privacyPolicy && (
-                <AsciiButton
-                  href={`/projects/${slug}/privacy`}
-                  variant="ghost"
-                >
+                <AsciiButton href={`/projects/${slug}/privacy`} variant="ghost">
                   privacy policy
                 </AsciiButton>
               )}

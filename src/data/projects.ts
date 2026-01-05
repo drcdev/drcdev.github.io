@@ -30,6 +30,106 @@ Built with a feature-based architecture using Riverpod for state management, Dri
       github: "https://github.com/drcdev/tempo",
     },
     featured: true,
+    privacyPolicy: `
+# Privacy Policy for Tempo
+
+**Last updated:** January 5, 2026
+
+## Overview
+
+Tempo is an offline-first routine timer app. Your privacy is important to us. This policy explains what data we collect, how it's stored, and your rights.
+
+## Offline-First Design
+
+Tempo works completely offline. All your data is stored locally on your device first:
+
+- Routines and step configurations
+- Workout history and completion records
+- App preferences and settings
+
+**No account is required** to use Tempo on iOS or Android. Your data stays on your device unless you choose to enable cloud sync.
+
+## Optional Cloud Sync
+
+If you enable cloud sync, your data is stored on [Supabase](https://supabase.com) servers in **Canada (Montreal, Quebec)** using AWS infrastructure.
+
+### What Gets Synced
+
+When sync is enabled:
+- Routines and steps you create
+- Workout history
+- Theme and accessibility preferences
+
+### What Stays Local
+
+These are never uploaded:
+- Text-to-speech voice settings (device-specific)
+- Health tracking preferences
+- Onboarding status
+
+### Data Security
+
+- All data is encrypted at rest (AES-256) and in transit (TLS)
+- Row-level security ensures you can only access your own data
+- Magic link authentication (no passwords stored)
+
+For details, see [Supabase Privacy Policy](https://supabase.com/privacy) and [Supabase Security](https://supabase.com/security).
+
+## Health Integration
+
+Tempo can optionally write workout data to Apple Health (iOS) or Health Connect (Android).
+
+- **Write-only** - We do not read your health data
+- **You control it** - Must be explicitly enabled per device
+- **Local only** - Health preferences are not synced
+
+Data written includes: workout type, routine name, start/end time, and duration.
+
+## Authentication
+
+We use Supabase magic link authentication:
+- Enter your email to receive a sign-in link
+- No passwords are stored
+- Sessions are managed securely by Supabase
+
+## Analytics & Tracking
+
+**We do not collect any analytics or tracking data.** There is no:
+- Usage tracking
+- Behavior analytics
+- Advertising or marketing tracking
+- Third-party analytics services
+
+## Data Sharing
+
+We do not sell, share, or transfer your personal data to third parties. Your data is only processed as necessary to provide the sync service through Supabase.
+
+## Data Retention
+
+- **Local data** remains on your device until you delete it
+- **Synced data** is retained until you delete your account
+- **Deleted records** are kept for 90 days for sync consistency, then permanently removed
+
+## Your Rights
+
+You can at any time:
+- **Disable sync** and continue using Tempo offline
+- **Delete your account** which removes all cloud data
+- **Export your data** by contacting us
+- **Keep or delete local data** when signing out
+
+## Children's Privacy
+
+Tempo does not knowingly collect information from children under 13.
+
+## Changes to This Policy
+
+We may update this policy from time to time. Changes will be reflected in the "Last updated" date above.
+
+## Contact
+
+For privacy questions, contact: privacy@drc.dev
+    `.trim(),
   },
   {
     slug: "focus-pocus",
