@@ -23,7 +23,7 @@ Master your timed routines with Tempo. Like a metronome guiding you through ever
 
 Built with a feature-based architecture using Riverpod for state management, Drift for type-safe SQL with reactive streams, and a custom FLXIT glassmorphism design system.
     `.trim(),
-    screenshots: [],
+    screenshots: ["/projects/tempo.jpeg"],
     technologies: ["Flutter", "Dart", "Riverpod", "Drift", "Supabase"],
     category: "app",
     links: {
