@@ -272,7 +272,7 @@ Created by Kieran McConnell. Maintained and deployed by Don Coleman.
     privacyPolicy: `
 # PlungeBuddy Privacy Policy
 
-**Last updated:** January 2, 2025
+**Last updated:** January 11, 2025
 
 ## Overview
 
@@ -290,6 +290,27 @@ PlungeBuddy requests access to your device's location to display weather and mar
 
 If you deny location access, the app will use a default location (Vancouver, BC).
 
+### User Preferences
+
+If you use the AI recommendation feature, the app stores your preferences locally on your device:
+
+- Preferred air temperature range
+- Preferred water temperature range
+- Optional notes you provide
+
+This data is stored only on your device and is never transmitted to us or any third party.
+
+## On-Device AI
+
+PlungeBuddy offers an optional AI-powered recommendation feature using Apple Intelligence (on supported devices). This feature:
+
+- Runs entirely on your device
+- Does not send your data to external AI services
+- Uses only your locally-stored preferences and current weather conditions
+- Is processed by Apple's on-device Foundation Models
+
+No conversation history or recommendations are stored or transmitted off your device.
+
 ## Third-Party Services
 
 To provide weather and tide information, your approximate location is shared with the following services:
@@ -305,10 +326,11 @@ We encourage you to review their privacy policies. We have no control over how t
 PlungeBuddy does not:
 
 - Create user accounts
-- Store personal information
 - Use analytics or tracking
-- Save data between sessions
 - Share data with advertisers
+- Transmit personal data to our servers
+
+User preferences (temperature ranges and notes) are stored locally on your device only.
 
 ## Children's Privacy
 
